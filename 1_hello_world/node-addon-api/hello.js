@@ -1,3 +1,8 @@
-var addon = require('bindings')('hello');
+var { AddonInstance } = require('bindings')('hello');
 
-console.log(addon.hello()); // 'world'
+function foo(arg0, arg1) {
+    console.log('bar', arg0, arg1);
+}
+const inst = new AddonInstance;
+inst.exportedFunction(foo);
+console.log(inst); // 'bar'
