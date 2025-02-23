@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const chalk = require("chalk");
+const { default: chalk } = require("chalk");
 const semver = require("semver");
 
 const examplesFolder = path.join(__dirname, "src");
